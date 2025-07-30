@@ -1,0 +1,74 @@
+---
+const { title } = Astro.props;
+
+import Navbar from "../components/Navbar.astro";
+import Navbarbottom from "../components/Navbar.svelte";
+
+
+const description = "Kerala Startup Mission is the central agency of the Government of Kerala for entrepreneurship development and incubation activities in Kerala, India.";
+const url = "https://startupmission.kerala.gov.in/";
+
+---
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>KERA | Kerala Startup Mission</title>
+    <meta name="author" content="KERA">
+    <meta name="description" content="KERA | Kerala Startup Mission">
+    <meta name="keywords" content="KERA | Kerala Startup Mission">
+    <meta name="robots" content="KERA,KSUM">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" is:inline></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+		<slot />
+
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js" is:inline></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js" is:inline></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js" is:inline></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js" is:inline></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js" is:inline></script>
+    <script src="assets/js/isotope.pkgd.min.js" is:inline></script>
+    <!-- Main Js File -->
+    <script src="assets/js/main.js" is:inline></script>
+
+
+</body>
+</html>
