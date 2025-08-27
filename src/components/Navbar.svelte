@@ -60,7 +60,7 @@
    flex sm:items-center
     ease-in-out transition-all transform duration-300
     z-50  py-2
-           {scrolled ? 'bg-white top-0 shadow-md' : 'bg-transparent text-white '}
+           {scrolled ? 'bg-white top-0 shadow-md' : 'bg-white text-black '}
 
 
    ">
@@ -69,9 +69,15 @@
      
         <a href="/" >
           <img
-          src="{scrolled ? '/img/logo.svg' : '/img/logo-white.svg'}"
+          src="{scrolled ? '/img/logo.svg' : '/img/logo.svg'}"
           alt="logo"
           class="items-center justify-center  h-12"
+        /></a>
+         <a href="/" >
+          <img
+          src="{scrolled ? '/img/kera.svg' : '/img/kera-t.svg'}"
+          alt="logo"
+          class="items-center justify-center  h-16 z-50"
         /></a>
       
      </div>
@@ -79,10 +85,10 @@
      <main class=" flex  items-start px-7 my-auto">
         <div style="font-family: Museo-Sans, sans-serif;" class="flex my-auto  {scrolled?'':''}">
             <a href="/"  class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">Home</a>
-            <a href="/#About"  class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">About</a>
-            <a href="/#Objectives"  class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">Objectives</a>
+            <a href="/#About"  class="md:flex page-scroll cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">About</a>
+            <a href="/#Objectives"  class="md:flex page-scroll cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">Objectives</a>
             
-            <a href="/#Get_Involved" class="md:flex hidden cursor-pointer  px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">Get Involved</a>
+            <a href="/#Get_Involved" class="md:flex page-scroll hidden cursor-pointer  px-4 py-3  md:py-1 uppercase   text-sm hover:text-green-900">Get Involved</a>
             <!-- <a href="/leap-membership"  class="md:flex cursor-pointer hidden px-4 py-3  md:py-1 uppercase   text-sm">Partners</a> -->
            
         </div>
@@ -124,16 +130,16 @@
          <nav>
             <ul class=" md:text-sm gap-2 font-data">
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
-                        <a href="/"  class="cursor-pointer  font-bold hover: uppercase ">Home</a>
+                        <a href="/"  class="page-scroll cursor-pointer  font-bold hover: uppercase ">Home</a>
                     </li>
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
-                      <a href="/#About"  class="cursor-pointer  uppercase ">About</a>
+                      <a href="/#About"  class="page-scroll cursor-pointer  uppercase ">About</a>
                     </li>
                     <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
-                      <a href="/#Objectives"  class="cursor-pointer  font-bold hover: uppercase ">Objectives</a>
+                      <a href="/#Objectives"  class="page-scroll cursor-pointer  font-bold hover: uppercase ">Objectives</a>
                     </li> 
                      <li on:click="{()=> menu_open = !menu_open }" class="px-5 py-2 transform hover:bg-gray-400 transition duration-500 hover:scale-100 md:hidden flex">
-                      <a href="/#Get_Involved"  class="cursor-pointer  font-bold hover: uppercase ">Get Involved</a>
+                      <a href="/#Get_Involved"  class="page-scroll cursor-pointer  font-bold hover: uppercase ">Get Involved</a>
                     </li>
   
                     

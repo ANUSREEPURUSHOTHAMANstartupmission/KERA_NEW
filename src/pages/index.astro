@@ -72,7 +72,7 @@ import Why from "../components/Why.astro";
                 <div class="flex  flex-col align-items-center w-full h-full items-center justify-center ">
                     <div class=" mx-auto text-center w-full flex flex-col items-center justify-center fadeInUp" data--delay="0.0s">
                         <div class="w-full">
-                            <h1 class="text-4xl md:text-7xl font-semibold text-white  pb-4">
+                            <h1 class="text-4xl md:text-7xl font-semibold text-white  pb-6 md:pt-20">
                                 Kerala Entrepreneurship &<br> Renewable Agriculture
                             </h1>
                         </div>
@@ -81,11 +81,14 @@ import Why from "../components/Why.astro";
                         </div>
                         
                         <div class=" w-full flex flex-col items-center justify-center">
-                            <p class="text-gray-300 md:text-xl text-base pt-6  md:max-w-5xl max-w-7xl">
+                            <p class="text-gray-300 md:text-xl text-base pt-8  md:max-w-5xl max-w-7xl">
                                 To make Kerala a model for sustainable, tech-enabled agriculture and rural entrepreneurship, where farmers, women, and youth benefit from innovation, markets, and inclusive economic growth.
                             </p>
                             <p class="md:pt-10 pt-4 text-white  text-xl font-bold">Empowering Farmers | Enabling Startups | Strengthening Rural Economies</p>
                         </div>
+                         <div class="hero-bottom mt-12 ">
+                            <a href="#About" class="page-scroll vs-btn text-white">Discover More</a>
+                          </div>
                         
                     </div>
                 </div>
@@ -94,7 +97,7 @@ import Why from "../components/Why.astro";
     </div>
     
   
- <div class="service-layout1">
+ <div class="service-layout1 hidden">
         <div class="container w-full items-center justify-center flex flex-col ">
             <div class=" grid md:grid-cols-3 md:w-3/4 w-full gap-6">
                 
@@ -309,10 +312,10 @@ import Why from "../components/Why.astro";
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="#"><i class="fal fa-tag"></i>For Startups</a>
+                                <a href="https://zfrmz.com/wrW5JcGcYvcwIvhKWn5b" target="_blank"><i class="fal fa-tag"></i>For Startups</a>
                             </div>
                             <h2 class="blog-title"><a> Are you building a tech-driven agri solution?</a></h2>
-                            <a  href="/" class="blog-inner-author">
+                            <a  href="https://zfrmz.com/wrW5JcGcYvcwIvhKWn5b" target="_blank" class="blog-inner-author">
                                 <img src="/img/s1.png" alt="blog author">
                                 <div class="text text-white">
                                    Apply for Startup Support
@@ -328,10 +331,10 @@ import Why from "../components/Why.astro";
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="#"><i class="fal fa-tag"></i>For Farmers & FPOs</a>
+                                <a href="https://zfrmz.com/FE1Cicm0R2PJoq1iB8aY" target="_blank"><i class="fal fa-tag"></i>For Farmers & FPOs</a>
                             </div>
                             <h3 class="blog-title"><a> Want to improve your productivity or market access?</a></h3>
-                            <a  href="/" class="blog-inner-author">
+                            <a  href="https://zfrmz.com/FE1Cicm0R2PJoq1iB8aY" target="_blank" class="blog-inner-author">
                                 <img src="/img/s1.png" alt="blog author">
                                 <div class="text text-white">
                                     Join KERA Collectives
@@ -347,10 +350,10 @@ import Why from "../components/Why.astro";
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="#"><i class="fal fa-tag"></i>For Partners & Institutions</a>
+                                <a href="https://zfrmz.com/ELjvzib7qHB9nj6W4Om5" target="_blank"><i class="fal fa-tag"></i>For Partners & Institutions</a>
                             </div>
                             <h3 class="blog-title"><a> Interested in collaboration, funding, or research?</a></h3>
-                            <a  href="/" class="blog-inner-author">
+                            <a  href="https://zfrmz.com/ELjvzib7qHB9nj6W4Om5" target="_blank" class="blog-inner-author">
                                 <img src="/img/s1.png" alt="blog author">
                                 <div class="text text-white">
                                   Partner With Us
@@ -428,3 +431,34 @@ import Why from "../components/Why.astro";
     ============================== -->
 
 </Layout>
+<script is:inline>
+  document.querySelectorAll("a.page-scroll").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = anchor.getAttribute("href");
+      const targetId = href.replace(/^\/?#/, "");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        e.preventDefault();
+
+        targetElement.scrollIntoView({ behavior: "smooth" });
+
+        history.replaceState(null, null, window.location.pathname);
+      }
+    });
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const targetId = hash.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        setTimeout(() => {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+          history.replaceState(null, null, window.location.pathname);
+        }, 100);
+      }
+    }
+  });
+</script>
